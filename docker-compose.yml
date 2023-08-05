@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  backend:
+    container_name: swampy_service
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+  rabbit:
+    image: rabbitmq:3.10.7-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"

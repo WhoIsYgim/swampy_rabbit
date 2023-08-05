@@ -1,0 +1,8 @@
+service_config:
+  port: 6666
+
+rabbit_config:
+  url: "amqp://localhost:5672"
+  queue_config:
+    queue_name: "swampy"
+

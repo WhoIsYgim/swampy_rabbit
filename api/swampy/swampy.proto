@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package message;
+
+option go_package = "github.com/WhoIsYgim/swampy_rabbit/pkg/api/swampy;swampyservice";
+
+import "google/protobuf/empty.proto";
+
+message ScheduleProduceMsgRequest {
+  string Message = 1;
+}
+
+service SwampyService {
+  rpc ScheduleProduceMsg(ScheduleProduceMsgRequest) returns(google.protobuf.Empty) {}
+}
